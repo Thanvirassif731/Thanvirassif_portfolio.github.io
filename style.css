@@ -1,0 +1,107 @@
+ /*Mobile devices*/
+ @media (min-width:120px) and (max-width:480px)  {         
+    main {
+        background-image: url("posters/poster01.jpg");
+        background-size: cover;
+        height: 250px;
+    }
+
+    .welcome {
+        color:rgb(255, 255, 255);
+        text-align: center;
+        padding-top: 80px;
+    }
+
+    .name {
+        color: rgb(246, 245, 243);
+        text-align: center;
+    }
+
+    .sub {
+        text-align: center;
+        padding: 20px;
+        background-color: rgb(237, 232, 232);
+        margin: 10px;
+        border-radius: 10px;
+        
+    }
+
+}
+
+/*iPads, Tablets*/
+@media (min-width:481px) and (max-width:768px) {
+    main {
+        background-image: url("posters/poster01.jpg");
+        background-size: cover;
+        height: 400px;
+
+    }
+
+    .welcome {
+        color:rgb(255, 255, 255);
+        text-align: center;
+        padding-top: 75px;
+    }
+
+    .name {
+        color: rgb(246, 245, 243);
+        text-align: center;
+    }
+}
+
+/*Small screens, laptops*/
+@media (min-width:769px) and (max-width:1024px) {
+
+    main {
+        background-image: url("posters/poster01.jpg");
+        background-size: cover;
+        height: 500px;
+
+    }
+    .welcome {
+        color:rgb(255, 255, 255);
+        text-align: center;
+        padding-top: 75px;
+    }
+
+    .name {
+        color: rgb(246, 245, 243);
+        text-align: center;
+    }
+
+    .name:hover {
+        transform: translateY(-10px);
+    }
+}
+
+/*Small screens, laptops*/
+@media (min-width:1025px) and (max-width:2280px) {
+    body {
+        width: 100%;
+        height: 100%;
+    }
+
+    main {
+        background-image: url("posters/poster01.jpg");
+        background-size: cover;
+        height: 850px;
+
+    }
+
+    .welcome {
+        color:rgb(255, 255, 255);
+        text-align: center;
+        padding-top: 425px;
+        font-size: 50px;
+    }
+
+    .name {
+        color: rgb(246, 245, 243);
+        text-align: center;
+        font-size: 100px;
+    }
+
+    .name:hover {
+        transform: translateY(-10px);
+    }
+}

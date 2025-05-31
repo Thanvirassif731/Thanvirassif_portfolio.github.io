@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogs - Thanvir Assif</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="bg-animation"></div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <i></i> Thanvir Assif
+            </a>
+            <div class="hamburger-menu" id="hamburger-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="index.html#about" class="nav-link">About</a></li>
+                <li><a href="index.html#experience" class="nav-link">Experience</a></li>
+                <li><a href="index.html#projects" class="nav-link">Projects</a></li>
+                <li><a href="certifications.html" class="nav-link">Certifications</a></li>
+                <li><a href="blogs.html" class="nav-link" style="background: rgba(255,255,255,0.1);">Blogs</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="main-container">
+        <div class="page-header">
+            <h1>My Blog Posts</h1>
+            <p>A collection of my thoughts, insights, and technical articles on Cloud, AI, and Project Management.</p>
+        </div>
+
+        <div class="blog-controls">
+            <div class="search-bar">
+                <input type="text" id="blog-search-input" placeholder="Search blog posts...">
+                <i class="fas fa-search search-icon"></i>
+            </div>
+            <div class="years-filter" id="years-filter">
+                </div>
+        </div>
+
+        <!--Personal Blogs Snipet-->
+        <div class="blogs-grid" id="blogs-grid">
+            <div class="blog-card" data-year="2025">
+                <div class="blog-image-container">
+                    <img src="https://placehold.co/600x300/667eea/ffffff?text=Serverless+Future" alt="Serverless Computing">
+                </div>
+                <div class="blog-header">
+                    <h3>The Future of Serverless Computing</h3>
+                    <div class="blog-meta">
+                        <span class="blog-platform"><i class="fas fa-laptop-code"></i> Personal Blog</span>
+                        <span class="blog-date" data-date="2025-05-15"><i class="fas fa-calendar-alt"></i> May 15, 2025</span>
+                    </div>
+                </div>
+                <div class="blog-body">
+                    <p class="blog-description">
+                        Exploring the evolving landscape of serverless architectures, their benefits, and challenges in
+                        modern cloud environments.
+                    </p>
+                </div>
+                <div class="blog-footer">
+                    <a href="#" class="blog-link">
+                        Read More <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!--Medium Blogs Snipet-->
+            <div class="blog-card" data-year="2025">
+                <div class="blog-image-container">
+                    <img src="https://placehold.co/600x300/764ba2/ffffff?text=AWS+Bedrock" alt="AWS Bedrock">
+                </div>
+                <div class="blog-header">
+                    <h3>Getting Started with AWS Bedrock</h3>
+                    <div class="blog-meta">
+                        <span class="blog-platform"><i class="fab fa-medium"></i> Medium</span>
+                        <span class="blog-date" data-date="2025-04-28"><i class="fas fa-calendar-alt"></i> April 28, 2025</span>
+                    </div>
+                </div>
+                <div class="blog-body">
+                    <p class="blog-description">
+                        A beginner's guide to leveraging Amazon Bedrock for building generative AI applications quickly
+                        and efficiently.
+                    </p>
+                </div>
+                <div class="blog-footer">
+                    <a href="https://medium.com/@yourprofile/getting-started-with-aws-bedrock-example" target="_blank"
+                        class="blog-link">
+                        Read on Medium <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!--LinkedIn Blogs Snipet-->
+            <div class="blog-card" data-year="2025">
+                <div class="blog-image-container">
+                    <img src="https://placehold.co/600x300/f093fb/ffffff?text=Agile+vs+Waterfall" alt="Agile vs Waterfall">
+                </div>
+                <div class="blog-header">
+                    <h3>Agile vs. Waterfall: Choosing the Right Methodology</h3>
+                    <div class="blog-meta">
+                        <span class="blog-platform"><i class="fab fa-linkedin"></i> LinkedIn </span>
+                        <span class="blog-date" data-date="2025-03-10"><i class="fas fa-calendar-alt"></i> March 10, 2025</span>
+                    </div>
+                </div>
+                <div class="blog-body">
+                    <p class="blog-description">
+                        A comparative analysis of Agile and Waterfall project management methodologies and when to apply
+                        each effectively.
+                    </p>
+                </div>
+                <div class="blog-footer">
+                    <a href="https://www.linkedin.com/pulse/agile-vs-waterfall-choosing-right-methodology-yourprofile"
+                        target="_blank" class="blog-link">
+                        Read on LinkedIn <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="blog-card" data-year="2025">
+                <div class="blog-image-container">
+                    <img src="https://placehold.co/600x300/4facfe/ffffff?text=S3+Security" alt="S3 Security">
+                </div>
+                <div class="blog-header">
+                    <h3>Securing Your S3 Buckets: Best Practices</h3>
+                    <div class="blog-meta">
+                        <span class="blog-platform"><i class="fas fa-laptop-code"></i> Personal Blog</span>
+                        <span class="blog-date" data-date="2025-02-20"><i class="fas fa-calendar-alt"></i> February 20, 2025</span>
+                    </div>
+                </div>
+                <div class="blog-body">
+                    <p class="blog-description">
+                        A deep dive into essential security configurations and best practices for Amazon S3 buckets to
+                        prevent data breaches.
+                    </p>
+                </div>
+                <div class="blog-footer">
+                    <a href="#" class="blog-link">
+                        Read More <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="blog-card" data-year="2025">
+                <div class="blog-image-container">
+                    <img src="https://placehold.co/600x300/43e97b/ffffff?text=Azure+Functions" alt="Azure Functions">
+                </div>
+                <div class="blog-header">
+                    <h3>Demystifying Azure Functions for Developers</h3>
+                    <div class="blog-meta">
+                        <span class="blog-platform"><i class="fab fa-medium"></i> Medium</span>
+                        <span class="blog-date" data-date="2025-01-05"><i class="fas fa-calendar-alt"></i> January 5, 2025</span>
+                    </div>
+                </div>
+                <div class="blog-body">
+                    <p class="blog-description">
+                        Understanding the power of serverless computing with Azure Functions and how to get started with
+                        your first function app.
+                    </p>
+                </div>
+                <div class="blog-footer">
+                    <a href="https://medium.com/@yourprofile/demystifying-azure-functions-example" target="_blank"
+                        class="blog-link">
+                        Read on Medium <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="blog-card" data-year="2024">
+                <div class="blog-image-container">
+                    <img src="https://placehold.co/600x300/fa709a/ffffff?text=AI+in+Project+Management" alt="AI in Project Management">
+                </div>
+                <div class="blog-header">
+                    <h3>The Role of AI in Modern Project Management</h3>
+                    <div class="blog-meta">
+                        <span class="blog-platform"><i class="fab fa-linkedin"></i> LinkedIn Pulse</span>
+                        <span class="blog-date" data-date="2024-12-18"><i class="fas fa-calendar-alt"></i> December 18, 2024</span>
+                    </div>
+                </div>
+                <div class="blog-body">
+                    <p class="blog-description">
+                        How artificial intelligence is transforming project planning, execution, and risk management in
+                        today's dynamic projects.
+                    </p>
+                </div>
+                <div class="blog-footer">
+                    <a href="https://www.linkedin.com/pulse/role-ai-modern-project-management-yourprofile"
+                        target="_blank" class="blog-link">
+                        Read on LinkedIn <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="blog-card" data-year="2024">
+                <div class="blog-image-container">
+                    <img src="https://placehold.co/600x300/667eea/ffffff?text=Cloud+Security+Trends" alt="Cloud Security Trends">
+                </div>
+                <div class="blog-header">
+                    <h3>Top Cloud Security Trends of 2024</h3>
+                    <div class="blog-meta">
+                        <span class="blog-platform"><i class="fas fa-laptop-code"></i> Personal Blog</span>
+                        <span class="blog-date" data-date="2024-10-01"><i class="fas fa-calendar-alt"></i> October 1, 2024</span>
+                    </div>
+                </div>
+                <div class="blog-body">
+                    <p class="blog-description">
+                        An overview of the most critical cloud security trends and how to stay protected in the evolving digital landscape.
+                    </p>
+                </div>
+                <div class="blog-footer">
+                    <a href="#" class="blog-link">
+                        Read More <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="blog-card" data-year="2023">
+                <div class="blog-image-container">
+                    <img src="https://placehold.co/600x300/764ba2/ffffff?text=DevOps+Basics" alt="DevOps Basics">
+                </div>
+                <div class="blog-header">
+                    <h3>Understanding DevOps: A Beginner's Guide</h3>
+                    <div class="blog-meta">
+                        <span class="blog-platform"><i class="fab fa-medium"></i> Medium</span>
+                        <span class="blog-date" data-date="2023-08-20"><i class="fas fa-calendar-alt"></i> August 20, 2023</span>
+                    </div>
+                </div>
+                <div class="blog-body">
+                    <p class="blog-description">
+                        A comprehensive introduction to DevOps principles, practices, and tools for aspiring engineers.
+                    </p>
+                </div>
+                <div class="blog-footer">
+                    <a href="https://medium.com/@yourprofile/understanding-devops-basics-example" target="_blank" class="blog-link">
+                        Read on Medium <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="no-results-message" id="no-results-message" style="display: none;">
+            <p>No blog posts found matching your criteria.</p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Thanvir Assif. All rights reserved. 
+                    <a href="https://www.linkedin.com/in/thanvir-assif-1b3435203/" target="_blank"
+                            class="btn btn-secondary" style="margin: 0.5rem;">
+                            <i class="fab fa-linkedin"></i> LinkedIn
+                        </a>
+                    <a href="https://github.com/Thanvirassif731" class="btn btn-secondary" style="margin: 0.5rem;">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // === FLOATING PARTICLES ===
+        function createParticles() {
+            const particleContainer = document.querySelector('.bg-animation');
+
+            for (let i = 0; i < 25; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+
+                const size = Math.random() * 25 + 15;
+                particle.style.width = size + 'px';
+                particle.style.height = size + 'px';
+
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.top = Math.random() * 100 + '%';
+
+                particle.style.animationDelay = Math.random() * 8 + 's';
+                particle.style.animationDuration = (Math.random() * 4 + 6) + 's';
+
+                particleContainer.appendChild(particle);
+            }
+        }
+
+        // === SCROLL ANIMATIONS ===
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // === NAVBAR SCROLL EFFECT ===
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 100) {
+                navbar.style.background = 'rgba(0, 0, 0, 0.2)';
+                navbar.style.backdropFilter = 'blur(25px)';
+            } else {
+                navbar.style.background = 'rgba(0, 0, 0, 0.1)';
+                navbar.style.backdropFilter = 'blur(20px)';
+            }
+        });
+
+        // === BLOG FILTERING LOGIC ===
+        let allBlogCards = [];
+        let currentYearFilter = 'All'; // 'All' or a specific year
+        let currentSearchTerm = '';
+
+        function initializeBlogFilters() {
+            allBlogCards = Array.from(document.querySelectorAll('.blog-card'));
+            const yearsFilterContainer = document.getElementById('years-filter');
+            const blogSearchInput = document.getElementById('blog-search-input');
+
+            // Extract unique years from blog posts
+            const years = new Set();
+            allBlogCards.forEach(card => {
+                const year = card.dataset.year;
+                if (year) {
+                    years.add(year);
+                }
+            });
+
+            const sortedYears = Array.from(years).sort((a, b) => b - a); // Sort years descending
+
+            // Create "All" button
+            const allButton = document.createElement('button');
+            allButton.textContent = 'All';
+            allButton.classList.add('year-button', 'active');
+            allButton.addEventListener('click', () => {
+                currentYearFilter = 'All';
+                updateYearButtons(allButton);
+                filterBlogs();
+            });
+            yearsFilterContainer.appendChild(allButton);
+
+            // Create year buttons
+            sortedYears.forEach(year => {
+                const button = document.createElement('button');
+                button.textContent = year;
+                button.classList.add('year-button');
+                button.addEventListener('click', () => {
+                    currentYearFilter = year;
+                    updateYearButtons(button);
+                    filterBlogs();
+                });
+                yearsFilterContainer.appendChild(button);
+            });
+
+            // Add event listener for search input
+            blogSearchInput.addEventListener('input', (e) => {
+                currentSearchTerm = e.target.value.toLowerCase().trim();
+                filterBlogs();
+            });
+
+            filterBlogs(); // Initial filter to show all blogs
+        }
+
+        function updateYearButtons(activeButton) {
+            document.querySelectorAll('.year-button').forEach(button => {
+                button.classList.remove('active');
+            });
+            if (activeButton) {
+                activeButton.classList.add('active');
+            }
+        }
+
+        function filterBlogs() {
+            let resultsFound = false;
+            const noResultsMessage = document.getElementById('no-results-message');
+
+            allBlogCards.forEach(card => {
+                const cardYear = card.dataset.year;
+                const cardTitle = card.querySelector('.blog-header h3').textContent.toLowerCase();
+                const cardDescription = card.querySelector('.blog-description').textContent.toLowerCase();
+
+                const matchesYear = (currentYearFilter === 'All' || cardYear === currentYearFilter);
+                const matchesSearch = (currentSearchTerm === '' ||
+                    cardTitle.includes(currentSearchTerm) ||
+                    cardDescription.includes(currentSearchTerm));
+
+                if (matchesYear && matchesSearch) {
+                    card.style.display = 'flex'; // Show the card
+                    resultsFound = true;
+                    // Re-apply scroll animation logic if needed, or ensure it's handled by observer
+                    observer.observe(card); // Re-observe to trigger animation if it was hidden
+                } else {
+                    card.style.display = 'none'; // Hide the card
+                    observer.unobserve(card); // Stop observing hidden cards
+                }
+            });
+
+            if (resultsFound) {
+                noResultsMessage.style.display = 'none';
+            } else {
+                noResultsMessage.style.display = 'block';
+            }
+        }
+
+        // === INITIALIZE ON PAGE LOAD ===
+        document.addEventListener('DOMContentLoaded', function () {
+            createParticles();
+            initializeBlogFilters(); // Initialize filters and display blogs
+
+            // Hamburger menu functionality
+            const hamburgerMenu = document.getElementById('hamburger-menu');
+            const navMenu = document.getElementById('nav-menu');
+
+            hamburgerMenu.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+                hamburgerMenu.querySelector('i').classList.toggle('fa-bars');
+                hamburgerMenu.querySelector('i').classList.toggle('fa-times');
+            });
+
+            // Close nav menu when a link is clicked (for mobile)
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    if (navMenu.classList.contains('active')) {
+                        navMenu.classList.remove('active');
+                        hamburgerMenu.querySelector('i').classList.remove('fa-times');
+                        hamburgerMenu.querySelector('i').classList.add('fa-bars');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

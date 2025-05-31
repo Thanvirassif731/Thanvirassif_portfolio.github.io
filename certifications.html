@@ -1,434 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Certifications - Thanvir Assif</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            line-height: 1.6;
-            color: #333;
-            overflow-x: hidden;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-        }
-
-        /* === ANIMATED BACKGROUND === */
-        .bg-animation {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
-            animation: gradientShift 12s ease infinite;
-        }
-
-        @keyframes gradientShift {
-            0%, 100% { background: linear-gradient(45deg, #667eea 0%, #764ba2 100%); }
-            20% { background: linear-gradient(45deg, #f093fb 0%, #f5576c 100%); }
-            40% { background: linear-gradient(45deg, #4facfe 0%, #00f2fe 100%); }
-            60% { background: linear-gradient(45deg, #43e97b 0%, #38f9d7 100%); }
-            80% { background: linear-gradient(45deg, #fa709a 0%, #fee140 100%); }
-        }
-
-        /* === FLOATING PARTICLES === */
-        .particle {
-            position: absolute;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-            animation: float 8s ease-in-out infinite;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0px) rotate(0deg) scale(1); }
-            25% { transform: translateY(-30px) rotate(90deg) scale(1.1); }
-            50% { transform: translateY(-60px) rotate(180deg) scale(0.9); }
-            75% { transform: translateY(-30px) rotate(270deg) scale(1.1); }
-        }
-
-        /* === NAVIGATION === */
-        .navbar {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(0, 0, 0, 0.1);
-            backdrop-filter: blur(20px);
-            z-index: 1000;
-            padding: 1rem 0;
-            transition: all 0.3s ease;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .nav-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 2rem;
-        }
-
-        .logo {
-            font-size: 1.8rem;
-            font-weight: 800;
-            color: white;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .nav-menu {
-            display: flex;
-            list-style: none;
-            gap: 2.5rem;
-        }
-
-        .nav-link {
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            position: relative;
-            padding: 0.5rem 1rem;
-            border-radius: 25px;
-        }
-
-        .nav-link:hover {
-            background: rgba(255, 255, 255, 0.1);
-            transform: translateY(-2px);
-        }
-
-        /* === MAIN CONTENT === */
-        .main-container {
-            padding-top: 120px;
-            padding-bottom: 50px;
-            max-width: 1400px;
-            margin: 0 auto;
-            padding-left: 2rem;
-            padding-right: 2rem;
-        }
-
-        .page-header {
-            text-align: center;
-            margin-bottom: 4rem;
-            color: white;
-        }
-
-        .page-header h1 {
-            font-size: 4rem;
-            font-weight: 800;
-            margin-bottom: 1rem;
-            background: linear-gradient(45deg, #fff, #f0f0f0);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            animation: slideInDown 1s ease;
-        }
-
-        .page-header p {
-            font-size: 1.3rem;
-            opacity: 0.9;
-            max-width: 600px;
-            margin: 0 auto;
-            animation: slideInUp 1s ease 0.2s both;
-        }
-
-        /* === CERTIFICATIONS GRID === */
-        .certifications-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-            gap: 2.5rem;
-            margin-bottom: 3rem;
-        }
-
-        .cert-card {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(20px);
-            border-radius: 25px;
-            padding: 2.5rem;
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
-            transition: all 0.4s ease;
-            position: relative;
-            overflow: hidden;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-
-        .cert-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
-            transition: left 0.8s ease;
-        }
-
-        .cert-card:hover::before {
-            left: 100%;
-        }
-
-        .cert-card:hover {
-            transform: translateY(-15px) scale(1.02);
-            box-shadow: 0 35px 70px rgba(0, 0, 0, 0.2);
-        }
-
-        .cert-header {
-            display: flex;
-            align-items: center;
-            gap: 1.5rem;
-            margin-bottom: 2rem;
-        }
-
-        .cert-icon {
-            font-size: 4rem;
-            padding: 1rem;
-            border-radius: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-width: 80px;
-            height: 80px;
-        }
-
-        .aws-icon { background: linear-gradient(135deg, #ff9900, #ff6600); color: white; }
-        .azure-icon { background: linear-gradient(135deg, #00a1f1, #0078d4); color: white; }
-        .pmi-icon { background: linear-gradient(135deg, #1f497d, #2d5aa0); color: white; }
-        .google-icon { background: linear-gradient(135deg, #4285f4, #ea4335); color: white; }
-
-        .cert-info h3 {
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-            color: #333;
-        }
-
-        .cert-info .provider {
-            font-size: 1.1rem;
-            color: #666;
-            font-weight: 600;
-        }
-
-        .cert-body {
-            margin-bottom: 2rem;
-        }
-
-        .cert-description {
-            font-size: 1rem;
-            line-height: 1.7;
-            color: #555;
-            margin-bottom: 1.5rem;
-        }
-
-        .skills-gained {
-            margin-bottom: 1.5rem;
-        }
-
-        .skills-gained h4 {
-            font-size: 1.1rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-            color: #333;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .skills-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 0.5rem;
-        }
-
-        .skill-item {
-            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            color: #495057;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            transition: all 0.3s ease;
-        }
-
-        .skill-item:hover {
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            color: white;
-            transform: scale(1.05);
-        }
-
-        .cert-footer {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding-top: 1.5rem;
-            border-top: 1px solid #eee;
-        }
-
-        .cert-date {
-            font-size: 0.9rem;
-            color: #666;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .verify-btn {
-            background: linear-gradient(45deg, #667eea, #764ba2);
-            color: white;
-            padding: 0.7rem 1.5rem;
-            border: none;
-            border-radius: 25px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .verify-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
-        }
-
-        /* === STATS SECTION === */
-        .stats-section {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(20px);
-            border-radius: 25px;
-            padding: 3rem;
-            margin: 3rem 0;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            text-align: center;
-        }
-
-        .stat-item {
-            color: white;
-        }
-
-        .stat-number {
-            font-size: 3rem;
-            font-weight: 800;
-            display: block;
-            margin-bottom: 0.5rem;
-            background: linear-gradient(45deg, #fff, #f0f0f0);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .stat-label {
-            font-size: 1.1rem;
-            opacity: 0.9;
-            font-weight: 500;
-        }
-
-        /* === ANIMATIONS === */
-        @keyframes slideInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes slideInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* === RESPONSIVE DESIGN === */
-        @media (max-width: 768px) {
-            .page-header h1 { font-size: 2.5rem; }
-            .certifications-grid { grid-template-columns: 1fr; }
-            .cert-card { padding: 2rem; }
-            .cert-header { flex-direction: column; text-align: center; }
-            .cert-icon { font-size: 3rem; }
-            .nav-menu { display: none; }
-            .main-container { padding-left: 1rem; padding-right: 1rem; }
-            .stats-grid { grid-template-columns: repeat(2, 1fr); }
-        }
-
-        @media (max-width: 480px) {
-            .certifications-grid { grid-template-columns: 1fr; gap: 1.5rem; }
-            .cert-card { padding: 1.5rem; }
-            .stats-grid { grid-template-columns: 1fr; }
-        }
-    </style>
 </head>
+
 <body>
-    <!-- Animated Background -->
     <div class="bg-animation"></div>
 
-    <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
             <a href="index.html" class="logo">
-                <i class="fas fa-certificate"></i>
+                <i></i>
                 Thanvir Assif
             </a>
-            <ul class="nav-menu">
+            <div class="hamburger-menu" id="hamburger-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
                 <li><a href="index.html" class="nav-link">Home</a></li>
                 <li><a href="index.html#about" class="nav-link">About</a></li>
                 <li><a href="index.html#experience" class="nav-link">Experience</a></li>
                 <li><a href="index.html#projects" class="nav-link">Projects</a></li>
-                <li><a href="certifications.html" class="nav-link" style="background: rgba(255,255,255,0.1);">Certifications</a></li>
+                <li><a href="certifications.html" class="nav-link"
+                        style="background: rgba(255,255,255,0.1);">Certifications</a></li>
+                <li><a href="blogs.html" class="nav-link">Blogs</a></li>
                 <li><a href="index.html#contact" class="nav-link">Contact</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- Main Content -->
     <div class="main-container">
-        <!-- Page Header -->
         <div class="page-header">
             <h1>Professional Certifications</h1>
-            <p>Showcasing my commitment to continuous learning and expertise in cloud technologies, AI, and project management</p>
+            <p>Showcasing my commitment to continuous learning and expertise in cloud technologies, AI, and project
+                management</p>
         </div>
 
-        <!-- Stats Section -->
         <div class="stats-section">
             <div class="stats-grid">
                 <div class="stat-item">
@@ -450,9 +64,7 @@
             </div>
         </div>
 
-        <!-- Certifications Grid -->
         <div class="certifications-grid">
-            <!-- AWS AI Practitioner -->
             <div class="cert-card">
                 <div class="cert-header">
                     <div class="cert-icon aws-icon">
@@ -465,7 +77,9 @@
                 </div>
                 <div class="cert-body">
                     <p class="cert-description">
-                        Validates understanding of AI/ML fundamentals and AWS AI services. Demonstrates ability to identify appropriate AI solutions for business problems and understand the benefits and risks of AI implementations.
+                        Validates understanding of AI/ML fundamentals and AWS AI services. Demonstrates ability to
+                        identify appropriate AI solutions for business problems and understand the benefits and risks of
+                        AI implementations.
                     </p>
                     <div class="skills-gained">
                         <h4><i class="fas fa-brain"></i> Key Skills Gained</h4>
@@ -491,7 +105,6 @@
                 </div>
             </div>
 
-            <!-- AWS Cloud Practitioner -->
             <div class="cert-card">
                 <div class="cert-header">
                     <div class="cert-icon aws-icon">
@@ -504,7 +117,9 @@
                 </div>
                 <div class="cert-body">
                     <p class="cert-description">
-                        Foundational certification that validates overall understanding of AWS Cloud concepts, services, security, architecture, pricing, and support. Essential for anyone working with AWS technologies.
+                        Foundational certification that validates overall understanding of AWS Cloud concepts, services,
+                        security, architecture, pricing, and support. Essential for anyone working with AWS
+                        technologies.
                     </p>
                     <div class="skills-gained">
                         <h4><i class="fas fa-cloud"></i> Key Skills Gained</h4>
@@ -530,7 +145,6 @@
                 </div>
             </div>
 
-            <!-- Azure Fundamentals -->
             <div class="cert-card">
                 <div class="cert-header">
                     <div class="cert-icon azure-icon">
@@ -543,7 +157,8 @@
                 </div>
                 <div class="cert-body">
                     <p class="cert-description">
-                        Demonstrates foundational knowledge of cloud concepts and Microsoft Azure services. Covers core Azure services, pricing, SLA, and lifecycle management fundamentals.
+                        Demonstrates foundational knowledge of cloud concepts and Microsoft Azure services. Covers core
+                        Azure services, pricing, SLA, and lifecycle management fundamentals.
                     </p>
                     <div class="skills-gained">
                         <h4><i class="fas fa-server"></i> Key Skills Gained</h4>
@@ -569,7 +184,6 @@
                 </div>
             </div>
 
-            <!-- Azure AI Fundamentals -->
             <div class="cert-card">
                 <div class="cert-header">
                     <div class="cert-icon azure-icon">
@@ -582,7 +196,8 @@
                 </div>
                 <div class="cert-body">
                     <p class="cert-description">
-                        Validates foundational knowledge of machine learning and artificial intelligence concepts and related Microsoft Azure services. Perfect for understanding AI workloads and considerations.
+                        Validates foundational knowledge of machine learning and artificial intelligence concepts and
+                        related Microsoft Azure services. Perfect for understanding AI workloads and considerations.
                     </p>
                     <div class="skills-gained">
                         <h4><i class="fas fa-robot"></i> Key Skills Gained</h4>
@@ -608,7 +223,6 @@
                 </div>
             </div>
 
-            <!-- PMI Project Management -->
             <div class="cert-card">
                 <div class="cert-header">
                     <div class="cert-icon pmi-icon">
@@ -621,7 +235,8 @@
                 </div>
                 <div class="cert-body">
                     <p class="cert-description">
-                        Comprehensive project management certification covering traditional and agile methodologies. Demonstrates ability to lead cross-functional teams and deliver successful projects.
+                        Comprehensive project management certification covering traditional and agile methodologies.
+                        Demonstrates ability to lead cross-functional teams and deliver successful projects.
                     </p>
                     <div class="skills-gained">
                         <h4><i class="fas fa-tasks"></i> Key Skills Gained</h4>
@@ -647,7 +262,6 @@
                 </div>
             </div>
 
-            <!-- Google Digital Marketing -->
             <div class="cert-card">
                 <div class="cert-header">
                     <div class="cert-icon google-icon">
@@ -660,7 +274,8 @@
                 </div>
                 <div class="cert-body">
                     <p class="cert-description">
-                        Comprehensive digital marketing certification covering SEO, SEM, social media marketing, analytics, and digital strategy. Essential for understanding modern marketing landscapes.
+                        Comprehensive digital marketing certification covering SEO, SEM, social media marketing,
+                        analytics, and digital strategy. Essential for understanding modern marketing landscapes.
                     </p>
                     <div class="skills-gained">
                         <h4><i class="fas fa-chart-line"></i> Key Skills Gained</h4>
@@ -688,25 +303,41 @@
         </div>
     </div>
 
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Thanvir Assif. All rights reserved. 
+                    <a href="https://www.linkedin.com/in/thanvir-assif-1b3435203/" target="_blank"
+                            class="btn btn-secondary" style="margin: 0.5rem;">
+                            <i class="fab fa-linkedin"></i> LinkedIn
+                        </a>
+                    <a href="https://github.com/Thanvirassif731" class="btn btn-secondary" style="margin: 0.5rem;">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </p>
+            </div>
+        </div>
+    </footer>
+
     <script>
         // === FLOATING PARTICLES ===
         function createParticles() {
             const particleContainer = document.querySelector('.bg-animation');
-            
+
             for (let i = 0; i < 25; i++) {
                 const particle = document.createElement('div');
                 particle.className = 'particle';
-                
+
                 const size = Math.random() * 25 + 15;
                 particle.style.width = size + 'px';
                 particle.style.height = size + 'px';
-                
+
                 particle.style.left = Math.random() * 100 + '%';
                 particle.style.top = Math.random() * 100 + '%';
-                
+
                 particle.style.animationDelay = Math.random() * 8 + 's';
                 particle.style.animationDuration = (Math.random() * 4 + 6) + 's';
-                
+
                 particleContainer.appendChild(particle);
             }
         }
@@ -739,9 +370,9 @@
         });
 
         // === INITIALIZE ON PAGE LOAD ===
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             createParticles();
-            
+
             // Animate certification cards on scroll
             document.querySelectorAll('.cert-card').forEach((card, index) => {
                 card.style.opacity = '0';
@@ -776,10 +407,32 @@
                     }, 20);
                 });
             };
-            observer.observe(statsSection);
-            observer.observe(statsSection);
+            // The statsSection.addEventListener is triggered when the section transitions to visible.
+            // This ensures the counter animation starts after the section itself is animated into view.
             statsSection.addEventListener('transitionend', animateCounters);
+
+            // Hamburger menu functionality
+            const hamburgerMenu = document.getElementById('hamburger-menu');
+            const navMenu = document.getElementById('nav-menu');
+
+            hamburgerMenu.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+                hamburgerMenu.querySelector('i').classList.toggle('fa-bars');
+                hamburgerMenu.querySelector('i').classList.toggle('fa-times');
+            });
+
+            // Close nav menu when a link is clicked (for mobile)
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    if (navMenu.classList.contains('active')) {
+                        navMenu.classList.remove('active');
+                        hamburgerMenu.querySelector('i').classList.remove('fa-times');
+                        hamburgerMenu.querySelector('i').classList.add('fa-bars');
+                    }
+                });
+            });
         });
     </script>
 </body>
+
 </html>
